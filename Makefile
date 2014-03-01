@@ -5,31 +5,31 @@ ERL=erl
 
 .PHONY: compile
 compile: $(DEPS)
-	@./rebar compile
+	@rebar compile
 
 $(DEPS):
-	@./rebar get-deps
+	@rebar get-deps
 
 .PHONY: clean
 clean:
-	@./rebar clean
+	@rebar clean
 
 .PHONY: distclean
 distclean: clean
-	@./rebar delete-deps
+	@rebar delete-deps
 
 .PHONY: eunit check
 check: eunit
 eunit: compile
-	@./rebar skip_deps=true eunit
+	@rebar skip_deps=true eunit
 
 .PHONY: xref
 xref: compile
-	@./rebar skip_deps=true xref
+	@rebar skip_deps=true xref
 
 .PHONY: docs
 docs:
-	@./rebar skip_deps=true doc
+	@rebar skip_deps=true doc
 
 .PHONY: dev
 dev: compile

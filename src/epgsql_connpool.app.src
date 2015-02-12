@@ -2,7 +2,7 @@
 %% ex: ts=4 sw=4 et
 {application, epgsql_connpool,
  [{description, "PostgreSQL Client Pool"},
-  {vsn, "1.0.0"},
+  {vsn, "1.0.1"},
   {registered, []},
   {applications, [epgsql]},
   {mod, {epgsql_connpool_app, []}}]}.
